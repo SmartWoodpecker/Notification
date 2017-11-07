@@ -17,7 +17,6 @@ namespace Test_App
             notification.EliminateDestinationFromSignal("levin@suncomteam.ru", "5");
             //Пытаемся отправить сообщение по коду
             notification.EditSignal("5");
-
             //Добавление новго сигнала
             notification.AddSignal("10");
          

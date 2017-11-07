@@ -38,10 +38,9 @@ namespace class_library
         {
             List<string> emailList = null;
 
-            if (signalMatchingList.ContainsKey(signal) && signalMatchingList[signal].Count>0)
+            if (signalMatchingList.ContainsKey(signal) && signalMatchingList[signal].Count>0 )
             {
                 emailList = signalMatchingList[signal];
-
                 SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 587);
                 Smtp.Credentials = new NetworkCredential("testsancom@mail.ru", "wolfeandga1");
                 MailMessage Message = new MailMessage();
