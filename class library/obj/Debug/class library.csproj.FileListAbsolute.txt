@@ -1,5 +1,5 @@
 c:\users\smart\documents\visual studio 2015\Projects\class library\class library\bin\Debug\class library.dll
 c:\users\smart\documents\visual studio 2015\Projects\class library\class library\bin\Debug\class library.pdb
-c:\users\smart\documents\visual studio 2015\Projects\class library\class library\obj\Debug\class library.csprojResolveAssemblyReference.cache
 c:\users\smart\documents\visual studio 2015\Projects\class library\class library\obj\Debug\class library.dll
 c:\users\smart\documents\visual studio 2015\Projects\class library\class library\obj\Debug\class library.pdb
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\class library\bin\Debug\class library.XML

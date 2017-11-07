@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>class library</name>
+    </assembly>
+    <members>
+        <member name="T:class_library.INotificationManager">
+            <summary>
+            интерфейс INotificationManager 
+            </summary>
+        </member>
+        <member name="M:class_library.INotificationManager.EditSignal(System.String)">
+            <summary>
+            метод Обработать сигнал
+            </summary>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.INotificationManager.AddDestinationForSignal(System.String,System.String)">
+            <summary>
+            метод Добавить адресата для сигнала
+            </summary>
+            <param name="mail"></param>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.INotificationManager.EliminateDestinationFromSignal(System.String,System.String)">
+            <summary>
+            Исключить адресата из сигнала
+            </summary>
+            <param name="mail"></param>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.INotificationManager.AddSignal(System.String)">
+            <summary>
+            Добавить сигнал
+            </summary>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.INotificationManager.GetListOfSupportedSignals">
+            <summary>
+             Получить список поддерживаемых сигналов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:class_library.INotificationManager.IsRecipientReceiveSignal(System.String,System.String)">
+            <summary>
+            Проверить будет ли адресат получать уведомление для сигнала
+            </summary>
+            <param name="mail"></param>
+            <param name="signal"></param>
+            <returns></returns>
+        </member>
+        <member name="T:class_library.NotificationManager">
+            <summary>
+            класс NotificationManager, реализующий интерфейс INotificationManager
+            </summary>
+        </member>
+        <member name="M:class_library.NotificationManager.#ctor">
+            <summary>
+            Конструктор, инициализируем тестовый список соотвтествия сигнала и почтовых адресов
+            </summary>
+        </member>
+        <member name="M:class_library.NotificationManager.EditSignal(System.String)">
+            <summary>
+            метод Обработать сигнал 
+            </summary>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.NotificationManager.AddDestinationForSignal(System.String,System.String)">
+            <summary>
+            метод Добавить адресата для сигнала
+            </summary>
+            <param name="mail"></param>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.NotificationManager.EliminateDestinationFromSignal(System.String,System.String)">
+            <summary>
+            Исключить адресата из сигнала
+            </summary>
+            <param name="mail"></param>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.NotificationManager.AddSignal(System.String)">
+            <summary>
+            Добавить сигнал
+            </summary>
+            <param name="signal"></param>
+        </member>
+        <member name="M:class_library.NotificationManager.GetListOfSupportedSignals">
+            <summary>
+            Получить список поддерживаемых сигналов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:class_library.NotificationManager.IsRecipientReceiveSignal(System.String,System.String)">
+            <summary>
+            Проверить будет ли адресат получать уведомление для сигнала
+            </summary>
+            <param name="mail"></param>
+            <param name="signal"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

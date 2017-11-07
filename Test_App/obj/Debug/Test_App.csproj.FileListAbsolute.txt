@@ -1,0 +1,8 @@
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\bin\Debug\Test_App.exe
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\bin\Debug\Test_App.pdb
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\obj\Debug\Test_App.exe
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\obj\Debug\Test_App.pdb
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\bin\Debug\class library.dll
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\bin\Debug\class library.pdb
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\bin\Debug\class library.xml
+C:\Users\smart\Documents\Visual Studio 2015\Projects\class library\Test_App\obj\Debug\Test_App.csprojResolveAssemblyReference.cache
