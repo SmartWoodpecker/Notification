@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net;
+using System.Net.Mail;
 
 namespace class_library
 {
@@ -53,7 +55,7 @@ namespace class_library
         public NotificationManager()
         {
             signalMatchingList = new Dictionary<string, List<string>>();
-            signalMatchingList.Add("1", new List<string>() {"andrey@mail.ru","cat@mail.ru"});
+            signalMatchingList.Add("1", new List<string>() {"rudenkoulkus@gmail.com", "smartrandle@gmail.com"});
             signalMatchingList.Add("2", new List<string>() {"andrey@gmail.com","cat@gmail.com"});
             signalMatchingList.Add("3", new List<string>() {"dog@gmail.com","pat@gmail.com"});
             signalMatchingList.Add("4", new List<string>() { "dog1@gmail.com", "pat1@gmail.com" });
@@ -70,28 +72,57 @@ namespace class_library
             if (signalMatchingList.ContainsKey(signal))
             {
                 emailList = signalMatchingList[signal];
+
+                SmtpClient Smtp = new SmtpClient("smtp.mail.ru", 587);
+                Smtp.Credentials = new NetworkCredential("rudenko_andrey@mail.ru", "ТУТ ПАРОЛЬ");
+                MailMessage Message = new MailMessage();
+                Message.From = new MailAddress("rudenko_andrey@mail.ru");
+
+                foreach (var email in emailList)
+                {
+                    Message.To.Add(new MailAddress(email)); // Куда отправлять
+                }
+
+                Message.Subject = "Проверка"; // свой заголовок
+                Message.Body = "Код сигнала " + signal;
+                Smtp.EnableSsl = true;
+                Smtp.Send(Message);
             }
-            
+
         }
 
         public void AddDestinationForSignal(string mail, string signal)
         {
+            if (signalMatchingList.ContainsKey(signal))
+            {
                 signalMatchingList[signal].Add(mail);
+            }
+            else
+            {
+                signalMatchingList.Add(signal, new List<string>() { mail });
+            }
         }
 
         public void EliminateDestinationFromSignal(string mail, string signal)
         {
-            signalMatchingList[signal].Remove(mail);
+            if (!signalMatchingList.ContainsKey(signal))
+            {
+                signalMatchingList[signal].Remove(mail);
+
+            }
         }
 
         public void AddSignal(string signal)
         {
-            signalMatchingList.Add(signal, null);
+            if (!signalMatchingList.ContainsKey(signal))
+            {
+                signalMatchingList.Add(signal, new List<string>());
+            }
         }
 
         public List<string> GetListOfSupportedSignals()
         {
-            List<string> signalList =null;
+            List<string> signalList = new List<string>();
 
             foreach (var element in signalMatchingList)
             {
