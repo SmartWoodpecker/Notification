@@ -38,7 +38,7 @@ namespace class_library
         {
             List<string> emailList = null;
 
-            if (signalMatchingList.ContainsKey(signal))
+            if (signalMatchingList.ContainsKey(signal) && signalMatchingList[signal].Count>0)
             {
                 emailList = signalMatchingList[signal];
 
